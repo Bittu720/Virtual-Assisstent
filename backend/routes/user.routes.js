@@ -1,13 +1,22 @@
 import express from "express";
-import { askToAssistant, getCurrentUser } from "../controllers/user.controller.js";
-import IsAuth from "../middlewares/isAuth.js"
-import upload from "../middlewares/multer.js"
-import { updateAssistant } from "../controllers/User.controller.js";
+import {
+  askToAssistant,
+  getCurrentUser,
+  updateAssistant
+} from "../controllers/user.controller.js";
 
-const userRouter = express.Router()
+import IsAuth from "../middlewares/isAuth.js";
+import upload from "../middlewares/multer.js";
 
-userRouter.get("/current", IsAuth, getCurrentUser)
-userRouter.post("/update", IsAuth, upload.single("assistantImage"), updateAssistant)
-userRouter.post("/asktoassistant", IsAuth, askToAssistant)
+const userRouter = express.Router();
 
-export default userRouter 
+userRouter.get("/current", IsAuth, getCurrentUser);
+userRouter.post(
+  "/update",
+  IsAuth,
+  upload.single("assistantImage"),
+  updateAssistant
+);
+userRouter.post("/asktoassistant", IsAuth, askToAssistant);
+
+export default userRouter;

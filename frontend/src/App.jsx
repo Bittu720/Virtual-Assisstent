@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
-import SignUp from './pages/Signup'
-import SignIn from './pages/SignIn'
+import SignUp from "./pages/signup";
+import SignIn from "./pages/signin";
+import Customize from "./pages/customize";
+import Customize2 from "./pages/customize2";
+import Home from "./pages/home";
+
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Customize from './pages/Customize';
-import Customize2 from './pages/Customize2';
-import Home from "./pages/Home";
 import { userDataContext } from './context/UserContext';
 
 

@@ -1,5 +1,5 @@
 import express from "express";
-import { askToAssistant, getCurrentUser } from "../controllers/User.controller.js";
+import { askToAssistant, getCurrentUser } from "../controllers/user.controller.js";
 import IsAuth from "../middlewares/isAuth.js"
 import upload from "../middlewares/multer.js"
 import { updateAssistant } from "../controllers/User.controller.js";
